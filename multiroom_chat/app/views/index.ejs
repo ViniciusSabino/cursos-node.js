@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Multiroom Chat</title>
+
+    <!-- estilo -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row" style="margin-top: 7em;">
+            <div class="col bg-bg-dark col-md-6" style="margin:auto; padding-bottom:10px;">
+                <% if(validacao.length > 0){ %>
+                <div class="row bg-danger">
+                    <a class="text-white" style="margin-left: 10px;">Existem erros</a>
+                    <ul>
+                    <% for(var x = 0; x < validacao.length; x++){ %>
+                        <li><a style="font-size: 14px;" class="text-white"><%= validacao[x].msg %></a></li>
+                    <% } %>
+                    </ul>
+                </div>
+                <% } %>
+                <div class="row" style="padding-bottom: 10px;">
+                    <img src="/images/multiroom_chat_2.png"style="margin:auto; margin-top: 10px;">
+                    </br>
+                </div>
+                <div class="row" style="padding-bottom: 10px;">
+                    <h5 class="text-white; font-weight-bold" style="margin: auto">Multiroom Chat</h5>
+                    </br>
+                </div>
+                <form method="POST" accept-charset="UTF-8" action="/chat" role="form">
+                    <div class="row" style="margin-top: 15px;">
+                        <label style="margin: auto;" class="text-white">Nome ou Apelido</label>
+                    </div>
+                    <div class="row" style="margin-top: 10px;">
+                        <input type="text" name="apelido" class="form-control">
+                    </div>
+                    <div class="row" style="margin-top: 10px;">
+                        <div class="col col-md-4" style="margin: auto;">
+                        <input type="submit" class="btn btn-info" style="margin:auto; width: 100%;" value="Entrar">
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

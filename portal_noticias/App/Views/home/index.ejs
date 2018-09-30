@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Portal de noticias</title>
+			<!-- css -->
+			<link rel="stylesheet" href="/css/bootstrap.css" crossorigin="anonymous">
+			<!-- jquery -->
+			<script src="js/jquery-2.2.1"></script>
+			<!-- favicon -->
+			<link rel="shortcut icon" href="images/favicon.ico" />
+		</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+			<div class="col">
+				<img src="images/logo.png"/>
+			</div>
+			<div class="col">
+				<a href="/formulario_inclusao_noticia" class="text-white"><button style="float: right; margin-left: 10px;" class="btn btn-primary">Adicionar Noticia</button></a>
+				<a href="/" class="text-white"><button style="float: right" class="btn btn-primary">Home</button></a>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div class="row" style="margin-top: 10px;">
+				<h5 style="margin:auto">Destaque</h5>
+			</div>
+			<div class="row" style="margin-top: 10px;">
+				<div class="card text-white bg-light" style="width: 70%; margin: auto;">
+					<div class="card-header">
+						<a class="text-danger">Por <%=noticias[0].autor %></a>
+						<h5 class="text-primary"><a class="text-primary" href="noticia?id_noticia=<%=noticias[0].id_noticia %>"><%=noticias[0].titulo %></a></h5>
+						<a class="text-primary"><%=noticias[0].data_noticia %></a>
+					</div>
+					<div class="card-body">
+						<a class="text-primary"><%=noticias[0].resumo %></a>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 10px;">
+				<% for(var i = 1; i < noticias.length; i++){ %>
+				<div class="col">
+					<div class="card text-white bg-light" style="width: 100%; margin: auto;">
+						<div class="card-header">
+							<a class="text-danger">Por <%=noticias[i].autor %></a>
+							<h5 class="text-primary"><a class="text-primary" href="noticia?id_noticia=<%=noticias[i].id_noticia %>"><%=noticias[i].titulo %></a></h5>
+							<a class="text-primary"><%=noticias[i].data_noticia %></a>
+						</div>
+						<div class="card-body">
+							<a class="text-primary"><%=noticias[i].resumo %></a>
+						</div>
+					</div>
+				</div>
+				<% } %>
+			</div>
+			<div class="row" style="margin:10px;">
+				<div class="col" style="width: 100%;">
+					<a class="text-white" href="noticias"><button class="btn btn-primary text-white" style="margin-left:40%;">Ver todas as Noticias</button></a>
+				</div>
+			</div>
+	</body>
+</html>
