@@ -1,0 +1,2 @@
+são testes que de fato testam funcionalides que possam realizar chamadas de APIs, cadastros no banco de dados 
+diferente das funções puras 

@@ -1,0 +1,5 @@
+Testes unitários são testes que a gente testa as funções puras, 
+
+funções puras são aquelas funções que dados as mesmas variaveis, não importa o número de vezes, ela tem sempre o 
+mesmo retorno, então essas são funções são funções que nunca tocam em efeitos colaterais, por exemplo chamadas a apis,
+cadastro no banco de dados, não tocam em recursos que possam dar errado
