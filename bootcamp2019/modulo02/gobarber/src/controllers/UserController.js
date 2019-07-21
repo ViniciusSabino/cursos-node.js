@@ -26,9 +26,11 @@ class UserController {
       });
     }
 
-    const { id, name, email, provider } = await User.create(req.body);
+    const { id, name, email, provider, avatar_id } = await User.create(
+      req.body
+    );
 
-    return res.json({ id, name, email, provider });
+    return res.json({ id, name, email, provider, avatar_id });
   }
 
   async update(req, res) {
@@ -70,13 +72,14 @@ class UserController {
       });
     }
 
-    const { id, name, provider } = await user.update(req.body);
+    const { id, name, provider, avatar_id } = await user.update(req.body);
 
     return res.json({
       id,
       name,
       email,
       provider,
+      avatar_id,
     });
   }
 }
